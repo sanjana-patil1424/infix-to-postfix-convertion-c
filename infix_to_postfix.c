@@ -1,14 +1,3 @@
-# infix-to-postfix-convertion-c
-
-C program to convert infix expressions into postfix notation using a stack implementation. Supports parentheses, operator precedence, exponentiation (`^`), and alphanumeric operands.
-
-## Files
-
-- `infix_to_postfix.c` — C implementation that reads infix expressions from standard input and prints the postfix form.
-
-## Code
-
-```c
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -78,26 +67,3 @@ int main() {
     }
     return 0;
 }
-```
-
-## Example output
-
-Sample run (three expressions piped to the program):
-
-```txt
-Infix: a+b*c
-Postfix: abc*+
-
-Infix: (A+B)*C
-Postfix: AB+C*
-
-Infix: A+B*C^D-E
-Postfix: ABCD^*+E-
-```
-
-To reproduce locally:
-
-```bash
-gcc infix_to_postfix.c -o infix_to_postfix
-printf "a+b*c\n(A+B)*C\nA+B*C^D-E\n" | ./infix_to_postfix
-```
