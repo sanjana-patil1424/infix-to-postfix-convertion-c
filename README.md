@@ -2,7 +2,6 @@
 
 C program to convert infix expressions into postfix notation using a stack implementation. Supports parentheses, operator precedence, exponentiation (`^`), and alphanumeric operands.
 
-## Description
 ## Features
 
 Converts infix expressions to postfix notation
