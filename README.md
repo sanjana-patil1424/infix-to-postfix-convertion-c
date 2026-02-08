@@ -2,6 +2,57 @@
 
 C program to convert infix expressions into postfix notation using a stack implementation. Supports parentheses, operator precedence, exponentiation (`^`), and alphanumeric operands.
 
+## Description
+## Features
+
+Converts infix expressions to postfix notation
+Uses stack-based implementation
+Supports arithmetic operators: +, -, *, /, ^
+Handles parentheses ( and )
+Maintains correct operator precedence and associativity
+Works with single-character operands (variables or digits)
+Simple command-line interface
+Demonstrates practical use of stacks in C
+
+## Algorithm
+
+Initialize an empty stack for operators.
+Scan the infix expression from left to right.
+If the character is an operand, add it to the postfix expression.
+If the character is an operator:
+Pop operators from the stack with higher or equal precedence.
+Push the current operator onto the stack.
+If the character is (, push it onto the stack.
+If the character is ), pop and add operators until ( is found.
+After scanning the expression, pop all remaining operators from the stack.
+Display the postfix expression.
+
+## Technologies Used
+
+Language: C
+
+## Data Structure
+Stack
+
+## Compiler
+GCC (or any standard C compiler)
+
+## How to Run
+gcc infix_to_postfix.c -o infix_to_postfix
+./infix_to_postfix
+
+## Project Structure
+infix-to-postfix/
+│── infix_to_postfix.c
+│── README.md
+
+## Concepts Covered
+
+Stack data structure
+Expression conversion
+Operator precedence and associativity
+C programming fundamentals
+
 ## Files
 
 - `infix_to_postfix.c` — C implementation that reads infix expressions from standard input and prints the postfix form.
@@ -101,3 +152,6 @@ To reproduce locally:
 gcc infix_to_postfix.c -o infix_to_postfix
 printf "a+b*c\n(A+B)*C\nA+B*C^D-E\n" | ./infix_to_postfix
 ```
+## Author
+Sanjana Patil
+
